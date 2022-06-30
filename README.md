@@ -1,10 +1,12 @@
 # otp-verification
-Overview
+
+
+#Overview
 
 
 OTP verification with the help of twilio API
 
-step to run the program:
+#step to run the program:
 
 1: install few packeges:
         1. pip install twilio
@@ -14,7 +16,7 @@ step to run the program:
 2. run in vsc or any editor of your choice 
 Note: Python 3 or anaconda should be install on your system
 
-About
+#About
 
 the project is all about MFA (Multifactor Authentication). its a module for MFA project which i'll make in future.
 this module uses twilio rest API for sending OTP to user and uses pyotp's TOTP i.e time-based-OTP, which is an extenstion HOTP 
