@@ -3,8 +3,8 @@ from twilio.rest import Client # importing Client function from the twilio rest 
 from timeit import default_timer as timer # importing timer function from the timeit library
 
 # Provide ssid and Authentication token of twilio rest API
-acc_ssid = "AC0d6d088782d7b622616559ef4638ab63"
-auth_token = "e508c4a112e3b011a87681563c765f1e"
+acc_ssid = "" # place your ssid here which you'll get from twilio website dashboard
+auth_token = "" # place your authentication token here which you'll get from twilio website dashboard
 
 client =  Client(acc_ssid,auth_token)
 
@@ -21,8 +21,8 @@ def verification(time_gap, entered_otp, new_otp, otp):
         client.messages \
                 .create(
                      body="OTP Verified Succsessfully",
-                     from_='+19896258461',
-                     to='+917295871791'
+                     from_='place the no. which you will get from twilio',
+                     to='place the reciever no.'
                  )
         return
     elif (time_gap)<30 and (entered_otp!=new_otp):
@@ -43,8 +43,8 @@ def resend_otp(otp):
             client.messages \
                 .create(
                      body=f"Your OTP is {new_current_otp}",
-                     from_='+19896258461',
-                     to='+917295871791'
+                     from_='place the no. which you will get from twilio',
+                     to='place the reciever no.'
                  )
             start = timer() # the timer starts here
             enter_otp = input("Enter current otp : ")
@@ -64,8 +64,8 @@ while True:
         client.messages \
                 .create(
                      body=f"Your OTP is {new_current_otp}",
-                     from_='+19896258461',
-                     to='+917295871791'
+                     from_='place the no. which you will get from twilio',
+                     to='place the reciever no.'
                  )
         start = timer() # the timer starts here
         enter_otp = input("Enter current_otp : ")
